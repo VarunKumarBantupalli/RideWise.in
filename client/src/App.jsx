@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Analytics } from "@vercel/analytics/next"
+
 
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
@@ -14,6 +14,7 @@ import ComplaintResponse from '../components/ComplaintResponse';
 import ScrollToTop from '../components/ScrollToTop';
 import Responses from '../components/Responses';
 import Navbar from '../components/Navbar';
+import ServerWakeNotice from '../components/ServerWakeNotice';
 
 // import AdminPanel from '../pages/AdminPanel';
 
@@ -23,7 +24,7 @@ import Navbar from '../components/Navbar';
 const App = () => {
   return (
     <Router>
-      
+      <ServerWakeNotice />
       <ScrollToTop/>
       <Routes>
         {/* Public Routes */}
